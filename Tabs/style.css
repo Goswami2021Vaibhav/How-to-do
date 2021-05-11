@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aquamarine;
+    font-family: monospace
+}
+
+.tab {
+    background-color: rgb(233, 233, 229);
+    margin: 40px 50px 0px 50px;
+    overflow: hidden;
+}
+
+.tab button {
+    font-size: 17px;
+    padding: 9px 10px;
+    float: left;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    line-height: 25px;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.tab button.active {
+    background-color: rgb(133, 130, 130);
+}
+
+.tab button:hover {
+    background-color: rgb(177, 172, 172);
+}
+
+.tabcontent {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+    padding: 8px 0px;
+    display: none;
+    background-color: white;
+    animation: fadeEffect .5s linear;
+}
+.tabcontent span{
+    float:right;
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.tabcontent span:hover{
+    color:red;
+}
+
+
+@keyframes fadeEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
