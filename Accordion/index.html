@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Accordion</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button class="accordion">Section1</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis. Harum, reiciendis odit earum porro enim mollitia aliquam animi voluptatem officia aliquid nesciunt aspernatur quisquam. Modi eaque voluptas aliquid rem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat error earum incidunt distinctio fugiat qui reprehenderit quisquam, voluptates non explicabo ducimus blanditiis id quo optio eligendi quia iste nihil laborum.</p>
+        </div>
+        <button class="accordion">Section2</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis. Harum, reiciendis odit earum porro enim mollitia aliquam animi voluptatem officia aliquid nesciunt aspernatur quisquam. Modi eaque voluptas aliquid rem?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint id ut accusantium consectetur tempore, dolore soluta! Sapiente officia veniam fugiat nulla sunt vitae! Et exercitationem, voluptates sint minima natus perferendis.</p>
+        </div>
+        <button class="accordion">Section3</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis. Harum, reiciendis odit earum porro enim mollitia aliquam animi voluptatem officia aliquid nesciunt aspernatur quisquam. Modi eaque voluptas aliquid rem?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem voluptatem culpa dignissimos nihil eaque magnam minima. Veritatis cum quo consectetur. Et facilis soluta nulla laudantium. Cupiditate eius rerum a explicabo!</p>
+        </div>
+        
+ <!-- ---------------------------java script start here----------- -->
+         <script>
+             var acc = document.getElementsByClassName('accordion');
+             var i;
+             for(i=0;i<acc.length;i++)
+             {
+                 acc[i].addEventListener('click',function() {
+                     /* Toggle between adding and removing the "active" class,
+                     to highlight the button that controls the panel */
+
+                     this.classList.toggle('active');
+
+                     /* Toggle between hiding and showing the active panel */
+                     var panel = this.nextElementSibling;
+                     if(panel.style.display ==='block'){
+                         panel.style.display = 'none';
+                         
+                     }
+                     else{
+                         panel.style.display = 'block';
+                         
+                     }
+                 })
+             }
+
+            
+
+         </script>
+
+       
+    </body>
+</html>
