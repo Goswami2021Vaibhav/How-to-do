@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+   
+}
+.container{
+    position: relative;
+    top:100px;
+    width:40px;
+    height: 40px;
+    cursor: pointer;
+}
+.container div{
+    position: relative;
+    background-color: rgb(34, 33, 33);
+    border: 2px solid black;
+    margin: 5px;
+    transition: .4s;
+} 
+ .change .bar1{
+   -webkit-transform:rotate(-45deg) translate(-5px, 5px);
+   transform: rotate(-45deg) translate(-5px, 5px);
+}
+ .change .bar2{
+    opacity: 0;
+}
+ .change .bar3{
+    -webkit-transform: rotate(45deg) translate(-5px,-5px);
+    transform: rotate(45deg) translate(-5px, -5px);
+}
