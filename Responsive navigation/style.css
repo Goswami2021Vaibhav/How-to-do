@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: aquamarine;
+}
+.navigation{
+    position: relative;
+    top:50px;
+    background-color: rgb(19, 18, 18);
+    overflow: hidden;
+}
+.navigation a{
+    text-decoration: none;
+    float: left;
+    display: block;
+    text-align: center;
+    color: white;
+    padding:10px 40px;
+    font-size: 20px;
+    transition: .3s;
+    
+}
+.navigation a:hover{
+    background-color: rgb(207, 203, 203);
+    color:black;
+}
+.navigation a:nth-child(1)
+{
+    background-color: rgb(3, 97, 24);
+    color:black;
+}
+.navigation i{
+    position: absolute;
+    right: 0px;
+    color:white;
+    padding: 10px 15px;
+    font-size: 23px;
+    display: none;
+    cursor: pointer;
+    transition: .3s;
+    
+}
+.navigation i:hover{
+    background-color: rgb(207, 203, 203);
+    color:black;
+}
+
+
+
+@media screen and (max-width:600px){
+
+    .navigation a:nth-child(2){
+        display: none;
+    }
+    .navigation a:nth-child(3){
+        display: none;
+
+    }
+    .navigation a:nth-child(4){
+        display: none;
+
+    }
+
+    .navigation i{
+        display: block;
+        top:0;
+    }
+}
+
+@media  screen and (max-width:600px)
+ {
+    
+     .navigation.responsive a{
+         float: none;
+         display: block;
+         text-align: left;
+     }
+     
+}
