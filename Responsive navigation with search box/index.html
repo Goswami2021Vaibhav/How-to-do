@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Responsive navigation with search-box</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/74f06fdcd6.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <i class="fas fa-bars" onclick="show()" id="menubtn"></i>
+        <div class="navbar" id="nav">
+
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+
+
+        </div>
+        <div class="searchbox">
+            <input type="search" placeholder="Search..." id="search">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+<!-- ---------------java script start here--------------- -->
+
+    <script>
+        function show() {
+            var x = document.getElementById('nav');
+            if (x.className === "navbar") {
+                x.className += " show";
+
+            } else {
+                x.className = "navbar";
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
