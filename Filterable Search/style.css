@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(231, 125, 106);
+    
+}
+.menuitm{
+    width: fit-content;
+    background-color: rgb(192, 189, 189);
+    position: relative;
+    top:100px;
+    left: 200px;
+    
+}
+.menu h1{
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;  
+    
+}.menu input{
+    margin-top: 10px;
+    width: 300px;
+    padding:15px;
+    font-size:15px;
+    outline: none;
+    border: none;
+}
+.menu a{
+   display: block;
+   background-color: rgb(192, 189, 189);
+   text-decoration: none;
+   font-size: 20px;
+   padding:10px 20px;
+   color:black;
+}
+.menu a:hover{
+    background-color: rgb(233, 227, 227);
+    
+}
