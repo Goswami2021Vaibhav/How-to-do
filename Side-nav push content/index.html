@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/74f06fdcd6.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navigation" id="sidenav">
+            <a href="javascript:void(0)" id="cross" onclick="closeNav()">&times;</a>
+             <a href="#">Home</a>
+             <a href="#">Gallery</a>
+             <a href="#">About</a>
+             <a href="#">Contact</a>
+             <a href="#">News</a>
+         </div>
+
+         
+
+         <div id="main">
+            <h1>Hello</h1>
+            <h4>This is a side navigation.<br> which push content.</h4>
+            <span  onclick="openNav()" id="bar">&#9776;</span>
+         </div>
+
+
+        <script>
+       
+          function openNav(){
+              document.getElementById("sidenav").style.width = "300px";
+              document.getElementById('main').style.marginLeft = "300px";
+          }
+          function closeNav(){
+              document.getElementById('sidenav').style.width = "0px";
+              document.getElementById('main').style.marginLeft = "0";
+          }
+
+        </script>
+    </body>
+</html>

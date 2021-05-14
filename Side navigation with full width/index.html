@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div class="navigation" id="sidenav">
+           <a href="#" id="cross" onclick="hide()">&times;</a>
+           <div id="menu">
+                <a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+           </div>
+           
+       </div>
+        <span id="bar" onclick="show()">&#9776;</span>
+
+        <script>
+         function show(){
+             document.getElementById('sidenav').style.width = "100%";
+         }
+
+         function hide(){
+             document.getElementById('sidenav').style.width = "0";
+         }
+
+        </script>
+    </body>
+</html>
