@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navigation" id="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">News</a>
+        </div>
+
+        <div>
+            <h1>This is a slide menu bar</h1>
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia, ratione magnam repellendus doloribus sapiente odio? Quibusdam amet ea iusto possimus nulla? Qui, molestias eos? Delectus repellat in saepe earum.</h1>
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia, ratione magnam repellendus doloribus sapiente odio? Quibusdam amet ea iusto possimus nulla? Qui, molestias eos? Delectus repellat in saepe earum.</h1>
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia, ratione magnam repellendus doloribus sapiente odio? Quibusdam amet ea iusto possimus nulla? Qui, molestias eos? Delectus repellat in saepe earum.</h1>
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia, ratione magnam repellendus doloribus sapiente odio? Quibusdam amet ea iusto possimus nulla? Qui, molestias eos? Delectus repellat in saepe earum.</h1>
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia, ratione magnam repellendus doloribus sapiente odio? Quibusdam amet ea iusto possimus nulla? Qui, molestias eos? Delectus repellat in saepe earum.</h1>
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia, ratione magnam repellendus doloribus sapiente odio? Quibusdam amet ea iusto possimus nulla? Qui, molestias eos? Delectus repellat in saepe earum.</h1>
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia, ratione magnam repellendus doloribus sapiente odio? Quibusdam amet ea iusto possimus nulla? Qui, molestias eos? Delectus repellat in saepe earum.</h1>
+        </div>
+        <!-- -----------------java script start here------------- -->
+        
+        <script > 
+        
+        window.onscroll = function()  {scrollFunction()};
+        
+        function scrollFunction(){
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+            {
+              document.getElementById('nav').style.top = "0";
+            }
+            else
+            {
+                document.getElementById('nav').style.top = '-50px';
+            }
+        }
+        </script>
+    </body>
+</html>
