@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(207, 205, 202);
+}
+.navigation{
+    position: absolute;
+    top:50px;
+}
+.navigation a{
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+    padding: 10px 50px 10px 20px;
+    display: block;
+    margin: 10px 0px;
+    position: relative;
+    left: -100px;
+    border-radius: 0 5px 5px 0;
+    transition: .5s;
+    
+}
+.navigation a:nth-child(1)
+{
+    background-color: #04AA6D;
+}
+.navigation a:nth-child(2)
+{
+    background-color: #2196F3;
+}
+.navigation a:nth-child(3)
+{
+    background-color: #f44336;
+}
+.navigation a:nth-child(4)
+{
+    background-color: #555 ;
+}
+.navigation a:hover{
+    left: 0;
+
+}
