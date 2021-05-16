@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/74f06fdcd6.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <button class="dropbtn" id="btn">Dropdown
+            <i class="fa fa-caret-down" id="Dicon"></i>
+        </button>
+        <div class="dropitem" id="item">
+            <a href="#">List 1</a>
+            <a href="#">List 2</a>
+            <a href="#">List 3</a>
+            <a href="#">List 4</a>
+        </div>
+
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </div>
+
+
+    <!-- ----------------java script start here------------------ -->
+
+    <script>
+        var dropdown = document.getElementsByClassName('dropbtn');
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener('click', function () {
+
+                // Add active class to dropdown button
+                this.classList.toggle('active');
+                // Rotate drop icon
+                document.getElementById('Dicon').classList.toggle('rotate');
+                // Hiding and showing dropitems
+                var dropitem = this.nextElementSibling;
+                if (dropitem.style.display === "block") {
+                    dropitem.style.display = "none";
+                } else {
+                    dropitem.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    background-color: rgb(27, 26, 26);
+    overflow: hidden;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.navigation a {
+    color: rgb(185, 181, 181);
+    font-size: 20px;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    background: none;
+}
+
+.dropbtn {
+    font-size: 18px;
+    text-align: left;
+    padding: 9px 15px;
+    float: left;
+    color: rgb(185, 181, 181);
+    display: block;
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    background: none;
+
+}
+
+.active {
+    background-color: green;
+    color: white;
+}
+
+.dropitem {
+    display: none;
+    background-color: #262626;
+}
+
+.navigation a:hover,
+.dropbtn:hover {
+    color: white;
+
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
