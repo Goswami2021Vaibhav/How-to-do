@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/74f06fdcd6.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="drop()" id="btn">Dropdown
+                <i class="fa fa-caret-down" id="Dicon"></i>
+            </button>
+            <div class="dropitem" id="item">
+                <a href="#">List 1</a>
+                <a href="#">List 2</a>
+                <a href="#">List 3</a>
+                <a href="#">List 4</a>
+            </div>
+        </div>
+        <a href="#">Contact</a>
+    </div>
+
+
+    <!-- --------------java script start here------------ -->
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function drop() {
+            document.getElementById('item').classList.toggle('show');
+            document.getElementById('Dicon').classList.toggle('rotate');
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("item");
+                var Dicon= document.getElementById('Dicon');
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                    Dicon.classList.remove('rotate');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
