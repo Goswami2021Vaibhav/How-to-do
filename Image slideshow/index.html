@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="gallerycontainer">
+        <div class="slideshow-container">
+            <div class="leftArrow"><span class="arrow arrowleft" onclick="plusSlides(-1)">&#10094;</span></div>
+            <div class="rightArrow"><span class="arrow arrowright" onclick="plusSlides(1)">&#10095;</span></div>
+            <div class="imageholder fade">
+                <img src="img1.jpg">
+                <p class="captiontxt">Caption 1</p>
+            </div>
+            <div class="imageholder fade">
+                <img src="img2.jpg">
+                <p class="captiontxt">Caption 2</p>
+            </div>
+            <div class="imageholder fade">
+                <img src="img3.jpg">
+                <p class="captiontxt">Caption 3</p>
+            </div>
+            <div class="imageholder fade">
+                <img src="img4.jpg">
+                <p class="captiontxt">Caption 4</p>
+            </div>
+
+        </div>
+
+        <div class="dotsContainer">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("imageholder");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    
+    </script>
+</body>
+
+</html>

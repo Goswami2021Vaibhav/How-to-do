@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.gallerycontainer{
+    width: 100%;
+    height: 600px;
+    max-width: 1000px;
+    user-select: none;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px 2px rgba(0,0,0,.3);
+    margin: auto;
+    padding: 5px;
+}
+.gallerycontainer .slideshow-container{
+    width: 100%;
+    height: 90%;
+    /* overflow: hidden; */
+    background-color: gainsboro;
+    position:relative;
+}
+.gallerycontainer .slideshow-container .imageholder{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+.gallerycontainer .slideshow-container .imageholder img{
+    width: 100%;
+    height: 100%;
+}
+.gallerycontainer .slideshow-container .leftArrow ,.gallerycontainer .slideshow-container .rightArrow{
+    width: 50px;
+    background-color: #00000036;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: .5s;
+    height: 72px;
+    top: 50%;
+    transform: translate(0px,-50%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+
+}
+.gallerycontainer .slideshow-container .rightArrow{
+    left: 100%;
+    right: 0;
+    transform: translate(-50px,-50%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+.gallerycontainer .slideshow-container .leftArrow:hover ,.gallerycontainer .slideshow-container .rightArrow:hover{
+    background-color: black;
+    cursor: pointer;
+}
+.arrow{
+    position: absolute;
+    font-size: 20px;
+    color:white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallerycontainer .slideshow-container .captiontxt{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.287);
+    overflow: hidden;
+    line-height: 50px;
+}
+
+.gallerycontainer .dotsContainer{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
