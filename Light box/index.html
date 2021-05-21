@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="imgbox">
+            <div class="images">
+                <img src="img1.jpg" alt="Car 1" onclick="openModal();currentSlide(1)">
+            </div>
+            <div class="images">
+                <img src="img2.jpg" alt="Car 2" onclick="openModal();currentSlide(2)">
+            </div>
+            <div class="images">
+                <img src="img3.jpg" alt="Car 3" onclick="openModal();currentSlide(3)">
+            </div>
+            <div class="images">
+                <img src="img4.jpg" alt="Car 4" onclick="openModal();currentSlide(4)">
+            </div>
+        </div>
+    </div>
+
+    <div class="modalbox" id="myModalbox">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal">
+            <div class="leftArrow" onclick="plusSlides(-1)"><span class="arrow" >&#10094;</span></div>
+            <div class="rightArrow" onclick="plusSlides(1)"><span class="arrow" >&#10095;</span></div>
+            <div class="modalImg">
+                <img src="img1.jpg"  class="mySlides">
+            </div>
+            <div class="modalImg">
+                <img src="img2.jpg"  class="mySlides">
+            </div>
+            <div class="modalImg">
+                <img src="img3.jpg"  class="mySlides">
+            </div>
+            <div class="modalImg">
+                <img src="img4.jpg"  class="mySlides">
+            </div>
+        </div>
+        <div class="row">
+            <div class="coloum">
+                <img src="img1.jpg" class="demo" onclick = "currentSlide(1)">
+            </div>
+            <div class="coloum">
+                <img src="img2.jpg" class="demo" onclick = "currentSlide(2)">
+            </div>
+            <div class="coloum">
+                <img src="img3.jpg" class="demo" onclick = "currentSlide(3)">
+            </div>
+            <div class="coloum">
+                <img src="img4.jpg" class="demo" onclick = "currentSlide(4)">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function openModal() {
+  document.getElementById("myModalbox").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModalbox").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+
+</html>
