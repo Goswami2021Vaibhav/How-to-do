@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallerycontainer {
+    width: 100%;
+    height: 600px;
+    max-width: 1000px;
+    user-select: none;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, .3);
+    margin: auto;
+    padding: 5px;
+}
+
+.gallerycontainer .slideshow-container {
+    width: 100%;
+    height: 90%;
+    background-color: gainsboro;
+    position: relative;
+}
+
+.gallerycontainer .slideshow-container .imageholder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+.gallerycontainer .slideshow-container .imageholder img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallerycontainer .slideshow-container .captiontxt {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.287);
+    overflow: hidden;
+    line-height: 50px;
+}
+
+.gallerycontainer .dotsContainer {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
