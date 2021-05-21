@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.imageGrid {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+
+}
+
+.imageGrid .Gridbox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.imageGrid .Gridbox .gridImg {
+    width: 24%;
+    height: 300px;
+    margin: auto;
+    margin-top: 4px;
+
+}
+
+.imageGrid .Gridbox .gridImg img {
+    width: 100%;
+    height: 100%;
+
+}
+
+@media screen and (max-width:1000px) {
+    .imageGrid .Gridbox .gridImg {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .imageGrid .Gridbox .gridImg {
+        width: 99%;
+    }
+}
