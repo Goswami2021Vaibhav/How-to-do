@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="slideContainer">
+            <div class="mySlides">
+                <img src="600911.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="600912.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="615561.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="843682.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="883254.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="894898.jpg">
+            </div>
+
+            <!-- Next and previous button -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+                <div class="coloum">
+                    <img src="600911.jpg" class="demo cursor" onclick="currentSlide(1)"  alt="LADA" >
+                </div>
+                <div class="coloum">
+                    <img src="600912.jpg" class="demo cursor" onclick="currentSlide(2)" alt="TOYOTA FT-1">
+                </div>
+                <div class="coloum">
+                    <img src="615561.jpg" class="demo cursor" onclick="currentSlide(3)" alt="Maclaren P1 GTR">
+                </div>
+                <div class="coloum">
+                    <img src="843682.jpg" class="demo cursor" onclick="currentSlide(4)" alt="PAGAN">
+                </div>
+                <div class="coloum">
+                    <img src="883254.jpg" class="demo cursor" onclick="currentSlide(5)" alt="720S">
+                </div>
+                <div class="coloum">
+                    <img src="894898.jpg" class="demo cursor" onclick="currentSlide(6)" alt="Agera RSR">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- -------------java script start here---------- -->
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next and previous controls.
+        function plusSlides(n){
+            showSlides(slideIndex +=n);
+        }
+
+        // Thumbnail image controls.
+        function currentSlide(n){
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n){
+            var i;
+            var slides = document.getElementsByClassName('mySlides');
+            var smallImg = document.getElementsByClassName('demo');
+            var captionTxt = document.getElementById('caption');
+
+            if(n > slides.length)
+            {
+                slideIndex = 1;
+            }
+            if(n < 1)
+            {
+                slideIndex = slides.length;
+            }
+
+            for(i = 0; i < slides.length; i++)
+            {
+                slides[i].style.display = "none";
+            }
+            for(i = 0; i < smallImg.length; i++)
+            {
+                smallImg[i].className = smallImg[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            smallImg[slideIndex - 1].className +=" active";
+            captionTxt.innerHTML = smallImg[slideIndex -1].alt; 
+        }
+    </script>
+</body>
+
+</html>
