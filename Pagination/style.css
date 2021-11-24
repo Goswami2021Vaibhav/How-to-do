@@ -1,32 +1,79 @@
-body {
+*{
     margin: 0;
     padding: 0;
-    background-color: rgb(15, 15, 15);
 }
-
-.pagination {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+section{
+width: 90%;
+height: auto;
+margin: auto;
 }
-
-.pagination a {
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    padding: 10px;
+h1{
+    margin: 50px auto;
+    width: 200px;
+}
+table{
+    width: 100%;
+    margin: 10px 0px 2px 6px;
+    table-layout: auto;
+    color: rgb(68, 67, 67);
     text-align: center;
-    border-radius: 50px;
-    width: 30px;
-    height: 30px;
-    transition: .3s;
-
+    background-color: #ffff;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table tr{
+border: 1px solid brown;
 
 }
+td:first-child{
+    width: 100px;
+}
+td input{
+    margin-left: 30px;
+}
+button{
+    padding: 8px 10px ;
+    margin: 10px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    display: none;
 
-.pagination a:hover {
-    color: black;
-    background-color: rgb(187, 183, 183);
+}
+label{
+    cursor: pointer;
+}
+input{
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+i.fa-edit{
+    color: lime;
+}
+i.fa-trash{
+    color: red;
+}
+ul{
+    height: 50px;
+    padding: 0 5px;
+    width: auto;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+td:nth-child(6){
+    float: none;
+    margin: 0;
+    width: 15px;
+    height: 15px;
 }
