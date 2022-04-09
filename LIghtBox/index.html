@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/74f06fdcd6.js"></script>
+</head>
+
+<body>
+
+    <div class="Lightbox-Image-Box" id="Lightbox-Image-Box-id">
+        <img src="Images/1090609.jpg" alt="Image1">
+        <img src="Images/abstract-1920x1080-dark-wallpaper-preview.jpg" alt="Image2">
+        <img src="Images/alexandre-bury-NVXwlz2CXuI-unsplash.jpg" alt="Image3">
+    </div>
+    <div class="Light-box" id="Light-Box-Id">
+        <div class="lightbox-top-row">
+            <span id="Slide-no"></span>
+            <div>
+                <a href="" id="Download-Btn" download >
+                    <i class="fas fa-download"></i></a>
+                <i class="fas fa-times" onclick="HideLightBox()"></i>
+            </div>
+        </div>
+        <div class="Light-box-Img">
+            <img src="" id="Light-box-Main-Img">
+            <p id="CaptionText"></p>
+        </div>
+        <div class="Light-box-slide-control">
+            <i class="far fa-arrow-alt-circle-left" id="Left-Control-btn" onclick="SlideLeft()"></i>
+            <i class="far fa-arrow-alt-circle-right" id="Right-Control-btn" onclick="SlideRight()"></i>
+        </div>
+
+    </div>
+    <script>
+        function HideLightBox() {
+            document.getElementById('Light-Box-Id').style.display = 'none'
+        }
+        var LightBox = document.getElementById('Lightbox-Image-Box-id');
+        var Img = LightBox.getElementsByTagName('img');
+        var ImgSrc = [];
+        var ImgCap = [];
+        for (var i = 0; i < Img.length; i++) {
+            Img[i].addEventListener('click', function () {
+                ShowLightBox(event);
+            });
+            ImgSrc.push(Img[i].src);
+            ImgCap.push(Img[i].alt);
+        }
+        var ImageSrc;
+        var MainImg = document.getElementById('Light-box-Main-Img');
+        var n;
+        var Slideno = document.getElementById('Slide-no');
+        var Right = document.getElementById('Right-Control-btn');
+        var Left = document.getElementById('Left-Control-btn');
+        var caption = document.getElementById('CaptionText');
+
+        function ShowLightBox(event) {
+            document.getElementById('Light-Box-Id').style.display = 'block';
+            ImageSrc = event.currentTarget.src;
+            MainImg.src = ImageSrc;
+            document.getElementById('Download-Btn').href = ImageSrc;
+            n = ImgSrc.indexOf(ImageSrc);
+            Slideno.innerHTML = (n + 1) + '/' + ImgSrc.length;
+            caption.innerHTML = event.currentTarget.alt;
+        }
+
+
+        function SlideRight() {
+            var MainImgIndex = ImgSrc.indexOf(MainImg.src);
+            var lastindex = ImgSrc.length - 1;
+
+            if (MainImgIndex != lastindex) {
+                MainImg.src = ImgSrc[MainImgIndex + 1];
+
+            } else {
+                MainImg.src = ImgSrc[0];
+            }
+            n = ImgSrc.indexOf(MainImg.src);
+            Slideno.innerHTML = (n + 1) + '/' + ImgSrc.length;
+            document.getElementById('Download-Btn').href = MainImg.src;
+            var cap = ImgSrc.indexOf(MainImg.src);
+            caption.innerHTML = ImgCap[cap];
+        }
+
+        function SlideLeft() {
+            var MainImgIndex = ImgSrc.indexOf(MainImg.src);
+            var lastindex = ImgSrc.length - 1;
+
+            if (MainImgIndex != 0) {
+                MainImg.src = ImgSrc[MainImgIndex - 1];
+
+            } else {
+                MainImg.src = ImgSrc[lastindex];
+            }
+            n = ImgSrc.indexOf(MainImg.src);
+            Slideno.innerHTML = (n + 1) + '/' + ImgSrc.length;
+            document.getElementById('Download-Btn').href = MainImg.src;
+            var cap = ImgSrc.indexOf(MainImg.src);
+            caption.innerHTML = ImgCap[cap];
+        }
+    </script>
+</body>
+
+</html>

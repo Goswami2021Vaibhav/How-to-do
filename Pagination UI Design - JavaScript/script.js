@@ -1,15 +1,20 @@
 var list_data = document.getElementById('list_data');
-var li = list_data.getElementsByTagName('li');
+var li = list_data.getElementsByTagName('tr');
 
 var remainder = li.length % 10;
 var x = (li.length - remainder) / 10 + 1; // finding queotent and adding 1 to get no of pages.
 
-var Arr = [1];
+var Arr = [3];
 for (var i = 1; i < x; i++) {
   Arr[i] = Arr[i - 1] + 10;
 }
-
-
+console.log(Arr);
+var Page_arr = [];
+for (var i = 1; i <= x; i++) {
+  Page_arr.push(i);
+}
+console.log(Page_arr);
+console.log(Arr);
 
 // selecting required element
 const element = document.querySelector(".pagination ul");
@@ -52,23 +57,8 @@ function createPagination(totalPages, page) {
     liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
 
   }
-
-  for (var i = 0; i < li.length; i++) {
-    li[i].style.display = "none";
-  }
   var p = page;
-  if (Arr[p - 1] != Arr[x - 1]) {
-    for (var i = Arr[p - 1]; i <= (Arr[p - 1] + 9); i++) {
-      li[i - 1].style.display = "block";
-    }
 
-  }
-  if (Arr[p - 1] == Arr[x - 1]) {
-    for (var i = Arr[p - 1]; i <= (Arr[p - 1] + remainder - 1); i++) {
-      li[i - 1].style.display = "block";
-    }
-
-  }
 
   if (page < totalPages - 1) { //if page value is less than totalPage value by -1 then show the last li or page
     if (page < totalPages - 2) { //if page value is less than totalPage value by -2 then add this (...) before the last li or page
@@ -81,11 +71,22 @@ function createPagination(totalPages, page) {
     liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"><span>Next <i class="fas fa-angle-right"></i></span></li>`;
   }
 
-
+  for (var i = 0; i < li.length; i++) {
+    li[i].style.display = "none";
+  }
+  if (p != x) {
+    for (var j = Arr[p - 1]; j < (Arr[p - 1] + 10); j++) {
+      li[j - 1].style.display = "block";
+    }
+  }
+  if(p == x){
+    for (var j = Arr[p - 1]; j < (Arr[p - 1] + remainder); j++) {
+      li[j - 1].style.display = "block";
+    }
+  }
 
   element.innerHTML = liTag; //add li tag inside ul tag
   return liTag; //reurn the li tag
-
 
 
 }
